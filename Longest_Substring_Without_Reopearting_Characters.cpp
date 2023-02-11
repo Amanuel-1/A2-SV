@@ -23,6 +23,5 @@ public:
   return maxans;
     }
 };
-#include<bits/stdc++.h>
 
-using namespace std;
+
