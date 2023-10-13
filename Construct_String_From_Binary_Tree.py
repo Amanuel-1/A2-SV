@@ -11,15 +11,15 @@ class Solution:
             
             ans += str(node.val)
             
-            if node.left:
-                ans+="("
+            if node.left or node.right:
+                ans += "("
                 search(node.left)
-                ans+=")"
-            if node.right:
-                ans+="("
-                search(node.right)
-                ans+=")"
+                ans += ")"
                 
-                
+                if node.right:
+                    ans += "("
+                    search(node.right)
+                    ans += ")"
+            
         search(root)
         return ans
